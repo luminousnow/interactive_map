@@ -60,6 +60,17 @@ advantageList.forEach((advantage) =>
   advantage.addEventListener("mouseover", currentAdvantage)
 );
 
+// on mouseover
+// --- visibility: visable;
+// --- add content
+
+advantageList.forEach((advantage) =>
+  advantage.addEventListener("mouseout", isHidden)
+);
+
+// on mouseout
+// --- visibility: hidden;
+
 function currentAdvantage(event) {
   for (const languageTitle in text) {
     let currentLanguageAdvantageList = text[languageTitle];
@@ -74,6 +85,14 @@ function currentAdvantage(event) {
       }
     }
   }
+
+  isVisable();
 }
 
-function infoManager() {}
+function isVisable() {
+  info.classList.remove("is-hidden");
+}
+
+function isHidden() {
+  info.classList.add("is-hidden");
+}

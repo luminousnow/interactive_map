@@ -1,3 +1,3 @@
 # interactive_map
 
-html, css, svg
+html, css, svg, inkscape
